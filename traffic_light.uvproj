@@ -46,7 +46,7 @@
           <OutputName>traffic_light</OutputName>
           <CreateExecutable>1</CreateExecutable>
           <CreateLib>0</CreateLib>
-          <CreateHexFile>0</CreateHexFile>
+          <CreateHexFile>1</CreateHexFile>
           <DebugInformation>1</DebugInformation>
           <BrowseInformation>1</BrowseInformation>
           <ListingPath>.\</ListingPath>
@@ -213,7 +213,7 @@
               <RCB>
                 <Type>0</Type>
                 <StartAddress>0x0</StartAddress>
-                <Size>0x0</Size>
+                <Size>0x10000</Size>
               </RCB>
               <RXB>
                 <Type>0</Type>
@@ -356,10 +356,42 @@
               <FileType>1</FileType>
               <FilePath>.\main.c</FilePath>
             </File>
+            <File>
+              <FileName>LIB.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\LIB.c</FilePath>
+            </File>
+            <File>
+              <FileName>OUTPUT.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\OUTPUT.c</FilePath>
+            </File>
+            <File>
+              <FileName>LED.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\LED.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
           <GroupName>Header</GroupName>
+          <Files>
+            <File>
+              <FileName>LIB.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\LIB.h</FilePath>
+            </File>
+            <File>
+              <FileName>OUTPUT.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\OUTPUT.h</FilePath>
+            </File>
+            <File>
+              <FileName>LED.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\LED.h</FilePath>
+            </File>
+          </Files>
         </Group>
       </Groups>
     </Target>

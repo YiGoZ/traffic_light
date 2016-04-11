@@ -1,0 +1,7 @@
+"STARTUP.obj",
+"main.obj",
+"LIB.obj",
+"OUTPUT.obj",
+"LED.obj" 
+TO "traffic_light" 
+RAMSIZE(256) 

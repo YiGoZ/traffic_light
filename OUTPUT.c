@@ -1,0 +1,34 @@
+#include <REGX52.H>
+#include"LIB.h"
+
+sbit wei = P2^7;
+sbit duan= P2^6;
+
+uchar wx[8]={0xfe,0xfd,0xfb,0xf7,0xef,0xdf,0xbf,0x7f};		 			//位选定义
+
+uchar dx[26]={	0xbf,0x86,0xdb,0xcf,0xe6,0xed,0xfd,0x87,0xff,0xef,		//有小数点0-9
+				0x3f,0x06,0x5b,0x4f,0x66,0x6d,0x7d,0x07,0x7f,0x6f,		//无小数点0-9
+				0x77,  //"A"
+                0x7C,  //"B"
+                0x39,  //"C"
+                0x5E,  //"D"
+                0x79,  //"E"
+                0x71,  //"F"  
+				};
+
+void output(uint pos,uint num)					//动态显示输出函数
+{	
+	wei=0;
+	duan=0;
+
+	wei=1;										//位选
+	P0=wx[pos-1];
+	wei=0;
+
+	duan=1;										//段选
+	P0=dx[num];
+	duan=0;	
+	delay(1);
+	
+	
+}
